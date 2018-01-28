@@ -1,0 +1,87 @@
+﻿@model Nop.Plugin.Widgets.HeaderContactDetails.Models.ConfigurationModel
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+<form asp-controller="WidgetsHeaderContactDetails" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @T("Plugins.Widgets.HeaderContactDetails.ContactDetails")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="PhoneNumberUrl_OverrideForStore" asp-input="PhoneNumberUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="PhoneNumberUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="PhoneNumberUrl" />
+                        <span asp-validation-for="PhoneNumberUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="PhoneNumberDisplayText_OverrideForStore" asp-input="PhoneNumberDisplayText" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="PhoneNumberDisplayText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="PhoneNumberDisplayText" />
+                        <span asp-validation-for="PhoneNumberDisplayText"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="WhatsAppNumberUrl_OverrideForStore" asp-input="WhatsAppNumberUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="WhatsAppNumberUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="WhatsAppNumberUrl" />
+                        <span asp-validation-for="WhatsAppNumberUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="WhatsAppNumberDisplayText_OverrideForStore" asp-input="WhatsAppNumberDisplayText" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="WhatsAppNumberDisplayText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="WhatsAppNumberDisplayText" />
+                        <span asp-validation-for="WhatsAppNumberDisplayText"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="EmailAddressUrl_OverrideForStore" asp-input="EmailAddressUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="EmailAddressUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="EmailAddressUrl" />
+                        <span asp-validation-for="EmailAddressUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="EmailAddressDisplayText_OverrideForStore" asp-input="EmailAddressDisplayText" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="EmailAddressDisplayText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="EmailAddressDisplayText" />
+                        <span asp-validation-for="EmailAddressDisplayText"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-blue" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

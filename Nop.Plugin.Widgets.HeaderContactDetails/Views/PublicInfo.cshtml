@@ -1,0 +1,36 @@
+﻿@model Nop.Plugin.Widgets.HeaderContactDetails.Models.PublicInfoModel
+@{
+    Layout = "";
+
+    Html.AddCssFileParts("~/Plugins/Widgets.HeaderContactDetails/Content/css/font-awesome.min.css");
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.PhoneNumberDisplayText))
+{
+    <div>
+        <a href="@Model.PhoneNumberUrl">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            @T("Plugins.Widgets.HeaderContactDetails.PhoneNumber") @Model.PhoneNumberDisplayText
+        </a>
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.WhatsAppNumberDisplayText))
+{
+    <div>
+        <a href="@Model.WhatsAppNumberUrl">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            @T("Plugins.Widgets.HeaderContactDetails.WhatsAppNumber") @Model.WhatsAppNumberDisplayText
+        </a>
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.EmailAddressDisplayText))
+{
+    <div>
+        <a href="@Model.EmailAddressUrl">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            @T("Plugins.Widgets.HeaderContactDetails.EmailAddress") @Model.EmailAddressDisplayText
+        </a>
+    </div>
+}

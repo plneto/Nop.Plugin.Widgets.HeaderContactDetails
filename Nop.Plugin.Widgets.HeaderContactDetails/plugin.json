@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Header Contact Details",
+  "SystemName": "Widgets.HeaderContactDetails",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.00" ],
+  "Author": "Paulo Lemos Neto",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.HeaderContactDetails.dll",
+  "Description": "Displays the contact details in the top header."
+}
