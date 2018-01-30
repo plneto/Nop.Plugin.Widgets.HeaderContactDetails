@@ -2,7 +2,7 @@
   "Group": "Widgets",
   "FriendlyName": "Header Contact Details",
   "SystemName": "Widgets.HeaderContactDetails",
-  "Version": "1.00",
+  "Version": "1.01",
   "SupportedVersions": [ "4.00" ],
   "Author": "Paulo Lemos Neto",
   "DisplayOrder": 1,

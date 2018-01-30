@@ -8,7 +8,7 @@
 @if (!string.IsNullOrWhiteSpace(Model.PhoneNumberDisplayText))
 {
     <div>
-        <a href="@Model.PhoneNumberUrl">
+        <a href="@Model.PhoneNumberUrl" target="_blank">
             <i class="fa fa-phone" aria-hidden="true"></i>
             @T("Plugins.Widgets.HeaderContactDetails.PhoneNumber") @Model.PhoneNumberDisplayText
         </a>
@@ -18,7 +18,7 @@
 @if (!string.IsNullOrWhiteSpace(Model.WhatsAppNumberDisplayText))
 {
     <div>
-        <a href="@Model.WhatsAppNumberUrl">
+        <a href="@Model.WhatsAppNumberUrl" target="_blank">
             <i class="fa fa-whatsapp" aria-hidden="true"></i>
             @T("Plugins.Widgets.HeaderContactDetails.WhatsAppNumber") @Model.WhatsAppNumberDisplayText
         </a>
@@ -28,7 +28,7 @@
 @if (!string.IsNullOrWhiteSpace(Model.EmailAddressDisplayText))
 {
     <div>
-        <a href="@Model.EmailAddressUrl">
+        <a href="@Model.EmailAddressUrl" target="_blank">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             @T("Plugins.Widgets.HeaderContactDetails.EmailAddress") @Model.EmailAddressDisplayText
         </a>
